@@ -12,7 +12,6 @@ class Cart < ActiveRecord::Base
   end
 
   def add_item(item) #need to keep working on this
-    items << Item.find(item)
-    save
+    LineItem.new(cart_id: self.id, item_id: item)
   end
 end

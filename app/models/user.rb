@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   has_many :carts
 
   def current_cart=
-    
+    binding.pry
   end
 end
