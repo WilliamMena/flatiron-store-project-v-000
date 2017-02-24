@@ -7,7 +7,13 @@ class User < ActiveRecord::Base
   
   has_many :carts
 
-  def current_cart=
-    binding.pry
+  attr_accessor :current_cart
+
+  def current_cart
+    @cart
+  end
+
+  def current_cart=(cart)
+    @cart = cart
   end
 end
